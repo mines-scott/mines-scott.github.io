@@ -1,0 +1,92 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #0C4160;
+}
+
+#nav_bar {
+    display: flex;
+    padding: 1vw;
+    padding-top: 1vw;
+}
+
+#logo {
+    color: #E2E6E8;
+    flex-grow: 50;
+    font-size: 2vw;
+    padding-top: 0.3vw;
+}
+
+.circle {
+    border-radius: 50%;
+    padding: 10px;
+    width: 1vw;
+    height: 1vw;
+    line-height: 1vw;
+    border: 3px solid #E2E6E8;
+    text-align: center;
+    display: inline-block;
+    font-size: 2vw;
+  }
+
+.nav_buttons {
+    color: #E2E6E8;
+    flex-grow: 1;
+    font-size: 1.5vw;
+    padding: 1vw;
+}
+
+#about_me {
+    display: flex;
+    height: 40vw;
+    width: 100%;
+    
+}
+
+#attractor_svg {
+    transform: scaleY(-1);
+    background-color: #0C4160;
+}
+
+[id*="attractor_id"] {
+    stroke-width: 0.03px;
+    stroke: url('#myGradient');
+    fill: none;
+}
+
+#name {
+    color: #E2E6E8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2vw;
+    max-width: 50%;
+}
+
+#education {
+    display: flex;
+    padding: 1vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+#education_stats {
+    flex-grow: 1;
+    /* background-color: red; */
+    color: #E2E6E8;
+    font-size: 1.5vw;
+}
+
+#relevant_coursework {
+    flex-grow: 1;
+    color: #E2E6E8;
+    font-size: 1.5vw;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.courses {
+    flex-grow: 1;
+}
