@@ -41,8 +41,17 @@ async function halvorsenSmoothRotate(centerPoint, i) {
     }
 }
 
+function scroll_education() {
+    let element = document.getElementById("education_scroll");
+    let top = element.getBoundingClientRect().top;
+    window.scrollTo(0, window.scrollY + top - 35);
+}
+
+function scroll_top() {
+    window.scrollTo(0, 0);
+}
+
 for (let i = 0; i < 100; i++) {
     let centerPoint = {x: -1.48 + Math.random() * 3, y: -1.51 + Math.random() * 3, z: -2.0 + Math.random() * 3}
     halvorsenSmoothRotate(centerPoint, i);
 }
-

@@ -1,3 +1,12 @@
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+}
+
+.main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+  }
+
 body {
     padding: 0;
     margin: 0;
@@ -8,6 +17,11 @@ body {
     display: flex;
     padding: 1vw;
     padding-top: 1vw;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    background-color: #052f47;;
 }
 
 #logo {
@@ -36,16 +50,26 @@ body {
     padding: 1vw;
 }
 
+.nav_buttons:hover {
+    background-color: #148cd1;
+    color: #E2E6E8;
+    flex-grow: 1;
+    font-size: 1.5vw;
+    padding: 1vw;
+}
+
 #about_me {
     display: flex;
     height: 40vw;
     width: 100%;
-    
+    padding-top: 5vw;
 }
 
 #attractor_svg {
     transform: scaleY(-1);
     background-color: #0C4160;
+    z-index: 0;
+    position: relative;
 }
 
 [id*="attractor_id"] {
@@ -63,22 +87,21 @@ body {
     max-width: 50%;
 }
 
-#education {
+#education, #projectNSkills, #contact {
     display: flex;
     padding: 1vw;
     padding-left: 2vw;
     padding-right: 2vw;
 }
 
-#education_stats {
-    flex-grow: 1;
-    /* background-color: red; */
+#education_stats, #projects {
+    flex: 1;
     color: #E2E6E8;
     font-size: 1.5vw;
 }
 
-#relevant_coursework {
-    flex-grow: 1;
+#relevant_coursework, #skills {
+    flex: 1;
     color: #E2E6E8;
     font-size: 1.5vw;
 }
@@ -87,6 +110,10 @@ body {
     display: flex;
 }
 
-.courses {
+.courses, .all_skills {
     flex-grow: 1;
 }
+
+html {
+    scroll-behavior: smooth;
+  }

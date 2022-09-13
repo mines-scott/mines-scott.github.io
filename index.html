@@ -13,14 +13,14 @@
     <span id="logo"> 
       &nbsp <span class="circle">S</span>
     </span>
-    <span class="nav_buttons"> About </span>
-    <span class="nav_buttons"> Education </span>
-    <span class="nav_buttons"> Skills </span>
-    <span class="nav_buttons"> Projects </span>
-    <span class="nav_buttons"> Resume </span>
-    <span class="nav_buttons"> Contact </span>
+    <span onclick="scroll_top()" class="nav_buttons"> About </span>
+    <span onclick="scroll_education()" class="nav_buttons">Education</span>
+    <a href="#contact"  class="nav_buttons"> Projects & Skills </a>
+    <a href="#contact"  class="nav_buttons"> Contact </a>
+    <a href="ScottEnriquezResume.pdf" class="nav_buttons" download=""> Resume </a>
   </nav>
 
+<div class="main">
   <div id="about_me"> 
     <div id="name" style="flex-grow: 3;">
       <span>
@@ -45,7 +45,7 @@
     </div>
   </div>
 
-  <hr style="margin-left: 2vw; margin-right: 2vw;"> 
+  <hr style="margin-left: 2vw; margin-right: 2vw;" id="education_scroll"> 
   <br> <br>
   <span style="padding-left: 2vw; color: white; font-size: 4vw;"> Education </span>
   <div id="education">
@@ -58,7 +58,7 @@
           <li>Involved in ACM - American Computer Machinery</li>
           <li>Involved in LUG - Linux Users Group</li>
        </ul>
-    </div>
+    </div> 
     <div id="relevant_coursework">
         <b>Relevant Coursework</b>
           <div class="flex-container"">
@@ -89,5 +89,61 @@
 
   <hr style="margin-left: 2vw; margin-right: 2vw;"> 
   <br> <br>
+  <span style="padding-left: 2vw; color: white; font-size: 4vw;"> Projects & Skills </span>
+  <div id="projectNSkills">
+    <div id="projects">
+       <b>Projects</b> 
+       <center style="font-size: 1.25vw;"><u>Personal Website (This site)</u></center>
+       <p style="font-size: 1.2vw;">
+        This personal project was my endeavour into HTML, CSS, and Javascript. Prior to this sites creation,
+        I had no knowledge of the aforementioned styling and programming languages. Apart from creating this portfolio page to
+        inform employers about my qualification, I was also able to brush up on linear algebra and differential equations with the creation 
+        of the animation above. The animation is based on a multivariate differential equation known as the Halvorsen Chaotic Attractor. I used
+        SVG (Scalable Vector Graphics) to create an approximation of the curves drawn by the Halvorsen equation. Since the equation describes a 
+        three-dimensional curve, I employed techniques from linear algebra to rotate the curve and project it onto a two-dimensional screen. 
+       </p>
+    </div>
+    <div id="skills">
+        <b>Technical Skills</b>
+          <div class="flex-container"">
+            <div class="all_skills">
+              <ul style="font-size: 1.2vw;">
+                <span style="padding: 4vw; font-size: 1.3vw;"><u>Languages</u></span>
+                <li>C/C++</li>
+                <li>Javascript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Python</li>
+                <li>Bash</li>
+                <li>R</li>
+            </ul>
+            </div>
+            <div class="all_skills">
+              <ul style="font-size: 1.2vw;">
+                <span style="padding: 3vw; font-size: 1.3vw;"><u>Frameworks & Libraries</u></span>
+                <li>SFML - C++ (Graphics)</li>
+                <li>Pandas - Python</li>
+                <li>Numpy - Python</li>
+                <li>Matplotlib - Python</li>
+            </ul>
+            </div>
+          </div>
+    </div>
+  </div>
+
+  <hr style="margin-left: 2vw; margin-right: 2vw;"> 
+  <br> <br>
+
+  <span style="padding: 2vw; color: white; font-size: 4vw;">Contact Me</span>
+  <div id="contact">  
+    <p style="color: #E2E6E8; font-size: 1.2vw">
+      Scott Enriquez <br>
+      enriquezscott@mines.edu <br>
+      303-847-3825 <br>
+      <a href="https://www.linkedin.com/in/scott-enriquez/" style="color: #E2E6E8;">Linkedin</a>
+    </p>
+  </div>
+</div>
+
 </body>
 </html>
