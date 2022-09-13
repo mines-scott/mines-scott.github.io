@@ -1,6 +1,5 @@
 const iterations = 360;
 
-
 async function halvorsenSmoothRotate(centerPoint, i) {
     const alpha = 1.89, dt = 0.02, rotationScalar = 0.70710678118;
     let svgWindow = document.getElementById("attractor_svg");
@@ -41,6 +40,8 @@ async function halvorsenSmoothRotate(centerPoint, i) {
     }
 }
 
+history.scrollRestoration = 'manual';
+
 function scroll_education() {
     let element = document.getElementById("education_scroll");
     let top = element.getBoundingClientRect().top;
@@ -49,6 +50,10 @@ function scroll_education() {
 
 function scroll_top() {
     window.scrollTo(0, 0);
+}
+
+function scroll_bottom() {
+    window.scrollTo(0, document.body.scrollHeight);
 }
 
 for (let i = 0; i < 100; i++) {
