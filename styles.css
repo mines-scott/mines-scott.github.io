@@ -1,10 +1,14 @@
+html {
+    scroll-padding-top: 120px;
+  }
+
 a {
     color: inherit; /* blue colors for links too */
     text-decoration: inherit; /* no underline */
 }
 
 .main {
-    margin-top: 30px; /* Add a top margin to avoid content overlay */
+    margin-top: 40px; /* Add a top margin to avoid content overlay */
   }
 
 body {
@@ -13,58 +17,86 @@ body {
     background-color: #0C4160;
 }
 
-#nav_bar {
+
+.nav_bar, .logo {
+    box-sizing: border-box;
+}
+
+.nav_bar {
     display: flex;
-    padding: 1vw;
-    padding-top: 1vw;
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    width: 100%;
-    background-color: #052f47;;
-}
-
-#logo {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #052f47;
     color: #E2E6E8;
-    flex-grow: 50;
-    font-size: 2vw;
-    padding-top: 0.3vw;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
 }
 
-.circle {
+.logo {
+    font-size: 30px;
+    margin: 15px;
     border-radius: 50%;
-    padding: 10px;
-    width: 1vw;
-    height: 1vw;
-    line-height: 1vw;
+    padding: 8px;
+    line-height: 15px;
     border: 3px solid #E2E6E8;
     text-align: center;
-    display: inline-block;
-    font-size: 2vw;
-  }
-
-.nav_buttons {
-    color: #E2E6E8;
-    flex-grow: 1;
-    font-size: 1.5vw;
-    padding: 1vw;
 }
 
-.nav_buttons:hover {
+.nav_buttons{
+    display: flex;
+    font-size: 20px;
+}
+
+.nav_buttons a {
+    padding: 16px;
+    display: block;
+}
+
+.nav_buttons a:hover {
     background-color: #148cd1;
     color: #E2E6E8;
-    flex-grow: 1;
-    font-size: 1.5vw;
-    padding: 1vw;
 }
 
-#about_me {
+.nav_menu {
+    position: absolute;
+    top: 24px;
+    right: 16px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: #E2E6E8;
+    border-radius: 10px;
+}
+
+.about_me {
     display: flex;
-    height: 40vw;
     width: 100%;
     padding-top: 5vw;
 }
 
+#about_me_text1 {
+    font-size: 2vw; 
+    color: #E2E6E8;
+}
+
+#about_me_text2 {
+    font-size: 8vw; 
+    color: #E2E6E8;
+}
+
+#about_me_text3 {
+    font-size: 1.5vw;
+    color: #E2E6E8;
+}
 #attractor_svg {
     transform: scaleY(-1);
     background-color: #0C4160;
@@ -85,6 +117,11 @@ body {
     align-items: center;
     padding-left: 2vw;
     max-width: 50%;
+    flex: 3;
+}
+
+#attractor_container {
+    flex: 1.5;
 }
 
 #education, #projectNSkills, #contact {
@@ -100,20 +137,118 @@ body {
     font-size: 1.5vw;
 }
 
+
+#education_header, #projectNSkills_header, #contact_header {
+    padding-left: 2vw; 
+    color: #E2E6E8; 
+    font-size: 4vw;
+}
+
 #relevant_coursework, #skills {
     flex: 1;
     color: #E2E6E8;
     font-size: 1.5vw;
 }
 
+#site_header, #site_description {
+    font-size: 1.2vw;
+    color: #E2E6E8;
+}
+
+#ts_header {
+    padding: 4vw; 
+    font-size: 1.3vw;
+    margin-left: -4vw;
+    color: #E2E6E8;
+}
+    
+    
 .flex-container {
     display: flex;
 }
 
 .courses, .all_skills {
     flex-grow: 1;
+    align-items: center;
+}
+
+.courses ul span {
+    padding: 4vw;
+    font-size: 1.3vw;
 }
 
 html {
     scroll-behavior: smooth;
-  }
+}
+
+#education_stats ul, .courses ul, #skills ul li, .all_skills, #contact p{
+    font-size: 1.2vw;
+    color: #E2E6E8;
+}
+
+@media (max-width: 600px) {
+    .nav_menu {
+        display: flex;
+    }
+    .nav_buttons {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .nav_buttons a {
+        padding: 8px;
+    }
+    .nav_bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav_buttons.active {
+        display: flex;
+    }
+    .about_me {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+    }
+    #name {
+        max-width: 100%;
+    }
+    #attractor_container {
+        width: 70%;
+    }
+    #about_me_text1 {
+        font-size: 5vw; 
+        color: #E2E6E8;
+    }
+    
+    #about_me_text2 {
+        font-size: 20vw; 
+        color: #E2E6E8;
+    }
+    
+    #about_me_text3 {
+        font-size: 5vw;
+        color: #E2E6E8;
+    }
+
+    #education, #projectNSkills {
+        flex-direction: column;
+    }
+    #education_header, #projectNSkills_header, #contact_header {
+        font-size: 12.5vw;
+    }
+    .line_break {
+        display: none;
+    }
+    #education_stats, #relevant_coursework, #projects, #skills, #contact p{
+        font-size: 7vw;
+    }
+    #education_stats ul, .courses ul, .course_header, #site_description, #site_header, #ts_header, #skills ul li{
+        font-size: 5vw;
+    }
+    #site_header {
+        margin-top: 5vw;
+        margin-bottom: -5vw;
+    }
+}

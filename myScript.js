@@ -16,7 +16,6 @@ async function halvorsenSmoothRotate(centerPoint, i) {
         x += (-alpha * x - 4 * y - 4 * z - Math.pow(y, 2)) * dt;
         y += (-alpha * y - 4 * z - 4 * x - Math.pow(z, 2)) * dt;
         z += (-alpha * z - 4 * x - 4 * y - Math.pow(x, 2)) * dt;
-        //yCoord: rotationScalar * (x + y), zCoord: z
         points.push({xCoord: rotationScalar * (x - y), yCoord: (rotationScalar * (x + y)) * Math.cos(theta) - z * Math.sin(theta),
                      zCoord: (rotationScalar * (x + y)) * Math.sin(theta) + z * Math.cos(theta)});
     }
@@ -40,21 +39,19 @@ async function halvorsenSmoothRotate(centerPoint, i) {
     }
 }
 
+let navMenu = document.getElementsByClassName('nav_menu')[0];
+let navButtons = document.getElementsByClassName('nav_buttons')[0];
+
+navMenu.addEventListener('click', () => {
+    navButtons.classList.toggle('active');
+})
+
+function removeHash() { 
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+    navButtons.classList.toggle('active');
+}
+
 history.scrollRestoration = 'manual';
-
-function scroll_education() {
-    let element = document.getElementById("education_scroll");
-    let top = element.getBoundingClientRect().top;
-    window.scrollTo(0, window.scrollY + top - 35);
-}
-
-function scroll_top() {
-    window.scrollTo(0, 0);
-}
-
-function scroll_bottom() {
-    window.scrollTo(0, document.body.scrollHeight);
-}
 
 for (let i = 0; i < 100; i++) {
     let centerPoint = {x: -1.48 + Math.random() * 3, y: -1.51 + Math.random() * 3, z: -2.0 + Math.random() * 3}
